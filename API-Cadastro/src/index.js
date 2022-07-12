@@ -12,5 +12,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.get('/check', ({ res }) => res.send('OK'));
+app.use(require('../src/cadastro/routes/routes'))
 
 app.listen(process.env.PORT)

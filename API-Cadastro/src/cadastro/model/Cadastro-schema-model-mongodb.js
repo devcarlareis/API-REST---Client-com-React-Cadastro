@@ -2,9 +2,6 @@ var mongoose = require('mongoose')
 var Schema = mongoose.Schema
 
 var CadastroSchema = new Schema({
-    Nº: {
-        type: String
-    },
     NOME_DO_BENEFICIÁRIO:{
         type: String
     },

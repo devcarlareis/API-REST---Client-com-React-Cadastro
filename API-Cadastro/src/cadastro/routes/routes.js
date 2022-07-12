@@ -8,15 +8,16 @@ const cadastroController = new CadastroController()
 cadastroRouter.post('/cadastro',
 celebrate({
   [Segments.BODY]: {
-    NOME_DO_BENEFICIÁRIO: Joi.string().NOME_DO_BENEFICIÁRIO().required(),
-    RG: Joi.string().RG().required(),
-    NIS: Joi.string().NIS().required(),
-    TELEFONE: Joi.string().TELEFONE().required(),
-    ENDEREÇO: Joi.string().ENDEREÇO().required(),
-    COMPOSIÇÃO_FAMILIAR: Joi.string().COMPOSIÇÃO_FAMILIAR().required(),
-    TOTAL_FAMILIAR: Joi.string().TOTAL_FAMILIAR().required(),
-    RECEBIMENTO_DE_DOAÇÃO_Assinatura_do_beneficiário_conforme_RG: Joi.string().RECEBIMENTO_DE_DOAÇÃO_Assinatura_do_beneficiário_conforme_RG().required(),
+    NOME_DO_BENEFICIÁRIO: Joi.string().required(),
+    RG: Joi.string().required(),
+    NIS: Joi.string().required(),
+    TELEFONE: Joi.string().required(),
+    ENDEREÇO: Joi.string().required(),
+    COMPOSIÇÃO_FAMILIAR: Joi.string().required(),
+    TOTAL_FAMILIAR: Joi.string().required(),
+    RECEBIMENTO_DE_DOAÇÃO_Assinatura_do_beneficiário_conforme_RG: Joi.boolean().required()
   },
 }),
 cadastroController.cadastrocontroler,
 )
+module.exports = cadastroRouter
