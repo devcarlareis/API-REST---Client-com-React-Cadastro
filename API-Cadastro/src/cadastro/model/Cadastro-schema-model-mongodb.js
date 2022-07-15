@@ -26,6 +26,9 @@ var CadastroSchema = new Schema({
     RECEBIMENTO_DE_DOAÇÃO_Assinatura_do_beneficiário_conforme_RG: {
         type: Boolean
     },
+    PAGAMENTO: {
+        type: Boolean
+    }
 })
 
 var Cadastro = mongoose.model('Cadastro', CadastroSchema);

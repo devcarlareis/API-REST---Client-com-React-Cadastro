@@ -3,10 +3,10 @@ const CadastroService = require('../service/cadastro-service')
 
 class CadastroController {
     async cadastrocontroler (req, res){
-        var {NOME_DO_BENEFICIÁRIO,RG,NIS,TELEFONE,ENDEREÇO,COMPOSIÇÃO_FAMILIAR,TOTAL_FAMILIAR,RECEBIMENTO_DE_DOAÇÃO_Assinatura_do_beneficiário_conforme_RG} = req.body;
+        var {NOME_DO_BENEFICIÁRIO,RG,NIS,TELEFONE,ENDEREÇO,COMPOSIÇÃO_FAMILIAR,TOTAL_FAMILIAR,RECEBIMENTO_DE_DOAÇÃO_Assinatura_do_beneficiário_conforme_RG, PAGAMENTO} = req.body;
 
         const cadastroService = new CadastroService()
-        const cadastrado = await cadastroService.cadastro(NOME_DO_BENEFICIÁRIO,RG,NIS,TELEFONE,ENDEREÇO,COMPOSIÇÃO_FAMILIAR,TOTAL_FAMILIAR,RECEBIMENTO_DE_DOAÇÃO_Assinatura_do_beneficiário_conforme_RG)
+        const cadastrado = await cadastroService.cadastro(NOME_DO_BENEFICIÁRIO,RG,NIS,TELEFONE,ENDEREÇO,COMPOSIÇÃO_FAMILIAR,TOTAL_FAMILIAR,RECEBIMENTO_DE_DOAÇÃO_Assinatura_do_beneficiário_conforme_RG,PAGAMENTO)
         return res.status(200).json(cadastrado);
     }
 }

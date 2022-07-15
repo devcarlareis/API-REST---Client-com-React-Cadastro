@@ -15,7 +15,8 @@ celebrate({
     ENDEREÇO: Joi.string().required(),
     COMPOSIÇÃO_FAMILIAR: Joi.string().required(),
     TOTAL_FAMILIAR: Joi.string().required(),
-    RECEBIMENTO_DE_DOAÇÃO_Assinatura_do_beneficiário_conforme_RG: Joi.boolean().required()
+    RECEBIMENTO_DE_DOAÇÃO_Assinatura_do_beneficiário_conforme_RG: Joi.boolean().required(),
+    PAGAMENTO: Joi.boolean().required()
   },
 }),
 cadastroController.cadastrocontroler,
